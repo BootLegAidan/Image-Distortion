@@ -1,0 +1,64 @@
+:root {
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	border: 1px solid;
+	width: 95vmin;
+	height: 95vmin;
+	position: absolute;
+	top: calc(50vh - 50vmin + 2.5vmin);
+	left: calc(50vw - 50vmin + 2.5vmin)
+}
+.left, .right {
+	width: 20px;
+	height: 90vh;
+	top: 5vh;
+}
+.left {
+	left: 0;
+}
+.right {
+	left: calc(100vw - 20px);
+}
+.up, .down {
+	height: 20px;
+	width: 90vw;
+	left: 5vw;
+}
+.up {
+	top: 0px;
+}
+.down {
+	top: calc(100vh - 20px)
+}
+.panHint {
+	position: absolute;
+	background: transparent;
+	transition: all 1s;
+	filter: blur(2.5px)
+}
+.active {
+	background: gray;
+	filter: blur(10px)
+}
+img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#imgConvert {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+	width: 100px;
+	height: 100px;
+}
